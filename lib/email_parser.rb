@@ -6,14 +6,15 @@
 class EmailParser
   
   attr_accessor :parse
-  
   @@parse = []
   
   def initialize(parse)
     @parse = parse
+    @@parse << self
   end
   
-  def parse
+  def self.parse
+
     @@parse << self
   end
 end
