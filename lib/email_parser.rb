@@ -16,6 +16,6 @@ class EmailParser
   def self.parse
     @@parse.map { |email| puts email.parse }
   end
-  return @@parse
+  return self.parse
 end
 end
