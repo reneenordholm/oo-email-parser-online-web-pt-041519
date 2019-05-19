@@ -14,6 +14,6 @@ class EmailParser
   end
   
   def self.parse
-    @@parse.each { |email| return email.parse }
+    @@parse.each { |email| puts email.parse.to_s }
   end
 end
