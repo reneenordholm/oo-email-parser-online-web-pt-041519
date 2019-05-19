@@ -4,24 +4,16 @@
 # or whitespace (' ').
 
 class EmailParser
-  
-  attr_accessor :parse
-  @@parse = []
-  
-  def initialize(parse)
-    @parse = parse
-    @@parse << self
-  end
-  
-  def self.parse
-    @@parse.uniq
-  end
+	attr_accessor :emails
+	
+	def initialize(emails)
+		@emails= emails
+	end
+	
+	def parse
+		@emails = @emails.gsub(/[\s,]/ ," ").split
+		# @email is an array now
+		@emails.uniq
+	end
+	
 end
-
-
-# def self.new_from_filename(name)
-#     song = self.new 
-#     song.name = (name.split(" - ")[1].chomp(".mp3"))
-#     song.artist_name = (name.split(" - ")[0])
-#     song
-#   end
