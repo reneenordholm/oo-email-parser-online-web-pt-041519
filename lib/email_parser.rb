@@ -14,7 +14,7 @@ class EmailParser
   end
   
   def self.parse
-    @@parse.each.split(",") { |email| puts email.parse }
+    @@parse.each { |email| puts email.split(",") }
   end
 end
 
