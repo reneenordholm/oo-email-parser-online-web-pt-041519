@@ -6,8 +6,10 @@
 class EmailParser
   
   attr_accessor :parse
+  @@parse = []
   
   def parse
     @parse = parse
+    @@parse << self
   end
 end
