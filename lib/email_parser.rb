@@ -14,7 +14,7 @@ class EmailParser
   end
   
   def self.parse
-    @@parse.each { |email| puts email.split(",") }
+    @@parse.uniq
   end
 end
 
